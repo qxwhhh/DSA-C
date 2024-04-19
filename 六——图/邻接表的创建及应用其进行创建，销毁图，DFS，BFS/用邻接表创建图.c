@@ -18,7 +18,7 @@ void CreatGraph(ALGraph * G,DataType a[],int n,int e)
         s = (EdgeNode*)malloc(sizeof(EdgeNode));
         s->adjvex = j;
         //！！!将s插入到第i个边表的表头！！！
-        s->next = G->adjlist[i].first;
+        s->next = G->adjlist[i].first;//此处是将现在这个节点插入到第一个位置，使原来的第一个变化为第二个，if any.
         G->adjlist[i].first = s;
     }
     
